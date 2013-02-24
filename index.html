@@ -29,6 +29,9 @@
       </header>
       <section>
         <h1>Autoping plugin</h1>
+        
+<p>A small Play2 plugin that ping an url every 10 minutes.
+</p>
 
 <h2>Setup</h2>
 
@@ -39,7 +42,7 @@
 
 <p>In the <code>Build.scala</code> file, configure a new resolver:</p>
 
-<pre><code>resolvers += "Autoping plugin" at "http://ndeverge.github.com/autoping-play2-plugin/"
+<pre><code>resolvers += Resolver.url("Autoping repository", url("http://ndeverge.github.com/autoping-play2-plugin/snapshots/"))(Resolver.ivyStylePatterns)
 </code></pre>
 
 <p>Add the library dependency:</p>
