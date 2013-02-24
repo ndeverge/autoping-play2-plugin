@@ -1,5 +1,6 @@
 # Autoping plugin
 
+A small Play2 plugin that ping an url every 10 minutes.
 
 
 ## Setup
@@ -13,10 +14,10 @@ In your `conf/play.plugins` file, add:
 In the `Build.scala` file, configure a new resolver:
 
 ```
-resolvers += "Autoping plugin" at "http://ndeverge.github.com/autoping-play2-plugin/"
+resolvers += Resolver.url("Autoping repository", url("http://ndeverge.github.com/autoping-play2-plugin/snapshots/"))(Resolver.ivyStylePatterns)
 ```
 
-Add the library dependency:
+And add the library dependency:
 
 ```
 val appDependencies = Seq(
