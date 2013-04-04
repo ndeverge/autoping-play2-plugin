@@ -17,13 +17,19 @@ In the `Build.scala` file, configure a new resolver:
 resolvers += Resolver.url("Autoping repository", url("http://ndeverge.github.com/autoping-play2-plugin/snapshots/"))(Resolver.ivyStylePatterns)
 ```
 
-And add the library dependency:
+Add the library dependency:
 
 ```
 val appDependencies = Seq(
    ...
    "com.github.ndeverge" %% "autoping-play2-plugin" % "0.1.0-SNAPSHOT"
 )
+```
+
+And configure the Url to ping the `conf/application.conf` file:
+
+```
+autoping.url="http://mysite.com"
 ```
 
 ## Development
