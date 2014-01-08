@@ -2,11 +2,11 @@ name := "autoping-play2-plugin"
 
 organization := "com.github.ndeverge"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.1.1"
 
-scalaVersion := "2.10.0"
+scalaVersion := "2.10.2"
 
 libraryDependencies ++= Seq(
-  "play" %% "play" % "2.1.0"
+  "com.typesafe.play" %% "play" % "2.2.1"
 )
 
