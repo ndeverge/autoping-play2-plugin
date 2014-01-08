@@ -19,10 +19,21 @@ resolvers += Resolver.url("Autoping repository", url("http://ndeverge.github.com
 
 And add the library dependency:
 
+For Play up to 2.1.x :
+
 ```
 val appDependencies = Seq(
    ...
    "com.github.ndeverge" %% "autoping-play2-plugin" % "0.1.0-SNAPSHOT"
+)
+```
+
+For Play 2.2.1
+
+```
+val appDependencies = Seq(
+   ...
+   "com.github.ndeverge" %% "autoping-play2-plugin" % "0.1.1"
 )
 ```
 
