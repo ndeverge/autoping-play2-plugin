@@ -1,7 +1,7 @@
 package com.github.ndeverge.autoping
 
 import play.api.Plugin
-import play.api.Logger
+import play.Logger
 import play.api.libs.concurrent.Akka
 import play.api.Application
 import akka.actor.Props
@@ -11,6 +11,7 @@ import akka.actor.Actor
 import play.api.libs.ws.WS
 import java.text.SimpleDateFormat
 import java.util.Date
+import play.api.Play.current
 
 class Autoping(app: Application) extends Plugin {
 
