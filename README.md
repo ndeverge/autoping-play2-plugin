@@ -1,4 +1,4 @@
-# Autoping plugin
+# Autoping plugin for play 2.3
 
 A small Play2 plugin that ping an url every 10 minutes.
 
@@ -11,29 +11,22 @@ In your `conf/play.plugins` file, add:
 10000:com.github.ndeverge.autoping.Autoping
 ```
 
-In the `Build.scala` file, configure a new resolver:
+In the `build.sbt` file, configure a new resolver:
 
 ```
-resolvers += Resolver.url("Autoping repository", url("http://ndeverge.github.com/autoping-play2-plugin/snapshots/"))(Resolver.ivyStylePatterns)
+resolvers ++= Seq(
+  "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/",
+  "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
+  Resolver.url("My GitHub Play Repository",  url("http://juliender.github.io/autoping-play2-plugin/snapshots/"))(Resolver.ivyStylePatterns)
+)
 ```
 
 Add the library dependency:
 
-For Play up to 2.1.x :
-
 ```
-val appDependencies = Seq(
+libraryDependencies ++= Seq(
    ...
-   "com.github.ndeverge" %% "autoping-play2-plugin" % "0.1.0-SNAPSHOT"
-)
-```
-
-For Play 2.2.1
-
-```
-val appDependencies = Seq(
-   ...
-   "com.github.ndeverge" %% "autoping-play2-plugin" % "0.1.1"
+   "com.github.ndeverge" %% "autoping-play2-plugin" % "0.1.2"
 )
 ```
 
