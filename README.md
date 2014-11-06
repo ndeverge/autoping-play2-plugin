@@ -43,6 +43,29 @@ And configure the Url to ping the `conf/application.conf` file:
 autoping.url="http://mysite.com"
 ```
 
+
+For Play 2.3.5
+
+
+In the `build.sbt` file, configure a new resolver:
+
+```
+	Resolver.url("My GitHub Play Repository",  url("http://juliender.github.io/autoping-play2-plugin/snapshots/"))(Resolver.ivyStylePatterns)
+```
+
+```
+val appDependencies = Seq(
+   ...
+   "com.github.ndeverge" %% "autoping-play2-plugin" % "0.1.2"
+)
+```
+
+And configure the Url to ping the `conf/application.conf` file:
+
+```
+autoping.url="http://mysite.com"
+```
+
 ## Development
 
 If you fork the project, for local testing, use `publish-local` from sbt and remove the `resolver`.
