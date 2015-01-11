@@ -47,12 +47,6 @@ autoping.url="http://mysite.com"
 For Play 2.3.5
 
 
-In the `build.sbt` file, configure a new resolver:
-
-```
-	Resolver.url("My GitHub Play Repository",  url("http://juliender.github.io/autoping-play2-plugin/snapshots/"))(Resolver.ivyStylePatterns)
-```
-
 ```
 val appDependencies = Seq(
    ...
