@@ -62,4 +62,4 @@ autoping.url="http://mysite.com"
 
 ## Development
 
-If you fork the project, for local testing, use `publish-local` from sbt and remove the `resolver`.
+If you fork the project, for local testing, use `+publish-local` from sbt and remove the `resolver`. The `+` sign aims to build for several Scala versions.
